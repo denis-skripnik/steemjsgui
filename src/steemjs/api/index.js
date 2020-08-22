@@ -280,6 +280,7 @@ class SteemApi {
 
 SteemApi.Blockchain = {
     LEX: "Lex",
+    Golos_id: "Golos.id",
     Alex: "Alex",
     Blockchained: "Blockchained",
     Testnet: "Testnet"
@@ -291,22 +292,28 @@ SteemApi.getDefaults = (blockchain = SteemApi.Blockchain.LEX) => {
     switch (blockchain) {
         case SteemApi.Blockchain.LEX:
             return {
-                ws : "wss://golos.lexai.host/ws",
+                ws : "https://golos.lexai.host",
             }    
             break;    
-        case SteemApi.Blockchain.Alex:
+            case SteemApi.Blockchain.Golos_id:
+                return {
+                    ws : "https://api-full.golos.id/",
+                }    
+                break;    
+    
+            case SteemApi.Blockchain.Alex:
             return {
-                ws: "wss://api.aleksw.space/ws",
+                ws: "https://api.aleksw.space/",
             }    
             break;    
         case SteemApi.Blockchain.Blockchained:
             return {
-                ws : "wss://api.golos.blckchnd.com/ws",
+                ws : "https://api-golos.blckchnd.com/",
             }    
             break;    
         case SteemApi.Blockchain.Testnet:
                 return {
-                    ws : "wss://testnet.golos.today/ws",
+                    ws : "https://testnet.golos.today/",
                 }    
                 break;    
         }
