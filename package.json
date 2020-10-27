@@ -5,7 +5,7 @@
   "homepage": "/steemjs",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "golos-classic-js": "^0.7.60",
+    "golos-classic-js": "latest",
     "handlebars": "^4.1.2",
     "history": "^4.7.2",
     "lodash": "^4.17.15",

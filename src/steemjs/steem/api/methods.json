@@ -187,6 +187,11 @@
   },
   {
     "api": "database_api",
+    "method": "get_accounts_balances",
+    "params": ["names"]
+  },
+  {
+    "api": "database_api",
     "method": "get_account_references",
     "params": ["accountId"]
   },
